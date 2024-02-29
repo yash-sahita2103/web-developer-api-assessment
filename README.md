@@ -22,7 +22,7 @@ You are tasked with creating a web application that retrieves data from the Open
 
 #### Additional Guidelines:
 - Use modern web development technologies and best practices.
-- You can use any front-end framework/library of your choice (e.g., React, Angular, Vue.js).
+- Please use React as the framework for this project. You are free to choose any variety of React (e.g., Vite, Next.js, etc.)..
 - Document your code appropriately with comments where necessary.
 - Pay attention to user experience and design aesthetics.
 - Test your application to ensure it functions as expected.
