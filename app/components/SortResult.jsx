@@ -40,19 +40,22 @@ function SortResults({ movies }) {
     return (
         <div>
             <div className="d-flex justify-content-between mb-3">
-                <select onChange={(e) => setYearRange(e.target.value)} className="form-select" aria-label="Filter by year range" style={{width:"15rem"}}>
+                <select onChange={(e) => setYearRange(e.target.value)} className="form-select" aria-label="Filter by year range" style={{width:"20rem"}}>
                     <option value="">Filter by Year Range</option>
+                    <option value="0000 - 2024">All</option>
+                    <option value="1980 - 1990">1990 - 2000</option>
+                    <option value="1990 - 2000">1990 - 2000</option>
                     <option value="2000 - 2010">2000 - 2010</option>
                     <option value="2010 - 2020">2010 - 2020</option>
                     {/* Add more ranges as needed */}
                 </select>
-                <select onChange={(e) => setSortOrder(e.target.value)} className="form-select" aria-label="Sort movies" style={{width:"15rem"}}>
+                <select onChange={(e) => setSortOrder(e.target.value)} className="form-select" aria-label="Sort movies" style={{width:"20rem"}}>
                     <option value="">Sort By</option>
                     <option value="Alpha">Alphabetical</option>
                     <option value="Reverse Alpha">Reverse Alphabetical</option>
                 </select>
             </div>
-            <div className="d-flex flex-wrap gap-3">
+            <div className="d-flex flex-wrap gap-4">
                 {filteredMovies.map(movie => (
                     <Card key={movie.imdbID} movie={movie} />
                 ))}
