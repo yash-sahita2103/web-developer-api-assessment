@@ -13,9 +13,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className} className="bg-black">
-      <Header></Header>
-      <main>{children}</main>
+      <body className={inter.className} className="bg-black">                           {/*unable to find a workarround but it is working for bg color */}
+        <Header></Header>                                                               {/*fixing a header component commong for all */}
+        <main>{children}</main>                                                         
       </body>
     </html>
   );

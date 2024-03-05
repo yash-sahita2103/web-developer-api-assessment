@@ -1,24 +1,13 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import { getMovies, testMovies } from "@/utils/requests";
-import Card from './components/Card'
+import { getMovies} from "@/utils/requests";
 import SortResults from "./components/SortResult";
 
 
 export default async function HomePage() {
-
-
-  const movies = await getMovies()
-  console.log(movies.Search)
+  const movies = await getMovies()                                       // using an async call (promise) to load the data from endpoint
   return (
   <div className="container my-3 bg-dark-subtle rounded pb-3">
-    <h1>Movies</h1>
-    <SortResults movies={movies}></SortResults>
-    <div className="d-flex flex-wrap gap-3">
-      {movies.Search.map(movie =>{
-        return <Card movie={movie}></Card>
-      })}
-    </div>
+    <h1 className="text-center">Movies DB</h1>
+    <SortResults movies={movies}></SortResults>                          {/* passing movies as a prop to the SortResult (client side) rendering and sortings */} 
   </div>
   );
 }
